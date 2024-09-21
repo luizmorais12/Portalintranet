@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f2f2f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px;
+    width: 80vw;
+}
+
+.card {
+    background-color: #555;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    opacity: 0;
+    animation: fade-in 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: #3d3d3d;
+    filter: brightness(1.2);
+}
+
+.label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Efeito hover nos ícones */
+.card i {
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover i {
+    transform: scale(1.1);
+}
+
+.unavailable-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.large {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.medium {
+    grid-column: span 2;
+}
+
+.small {
+    grid-column: span 1;
+}
+
+.available {
+    background-color: #3498db;
+}
+
+.unavailable {
+    background-color: #95a5a6;
+}
+
+.pronto-atendimento {
+    background-image: url('path-to-image');
+    background-size: cover;
+    background-position: center;
+}
+
+.internamento, .faturamento, .suprimentos {
+    background-color: #7f8c8d;
+}
+
+.ambulatorial {
+    background-color: #f39c12;
+}
+
+.recepcao {
+    background-color: #f1c40f;
+}
+
+.diagnostico {
+    background-color: #27ae60;
+}
+
+.administracao {
+    background-color: #8e44ad;
+}
+
+.indicadores {
+    background-color: #34495e;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
